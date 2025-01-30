@@ -210,6 +210,7 @@ set(XEUS_CPP_SRC
     src/xmagics/os.cpp
 
     # magics
+    src/xmagics/multi_interpreter.cpp
     src/xmagics/pythonexec.cpp
 )
 

@@ -380,6 +380,7 @@ __get_cxx_version ()
         // preamble_manager["magics"].get_cast<xmagics_manager>().register_magic("timeit",
         // timeit(&m_interpreter));
         preamble_manager["magics"].get_cast<xmagics_manager>().register_magic("python", pythonexec());
+        preamble_manager["magics"].get_cast<xmagics_manager>().register_magic("subinterp", multi_interpreter());
         preamble_manager["magics"].get_cast<xmagics_manager>().register_magic("file", writefile());
 #ifndef __EMSCRIPTEN__
         preamble_manager["magics"].get_cast<xmagics_manager>().register_magic("xassist", xassist());
