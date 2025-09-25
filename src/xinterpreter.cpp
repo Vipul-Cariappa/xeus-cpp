@@ -28,6 +28,8 @@
 #include "xparser.hpp"
 #include "xsystem.hpp"
 
+#include "xmagics/multi_interpreter.hpp"
+
 using Args = std::vector<const char*>;
 
 void* createInterpreter(const Args &ExtraArgs = {}) {
