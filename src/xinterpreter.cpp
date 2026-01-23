@@ -68,21 +68,7 @@ void* createInterpreter(const Args &ExtraArgs = {}) {
       )
       != ClangArgs.end())
   {
-      if (Cpp::LoadLibrary("libomp"))
-      {
-          return res;
-      }
-      std::string conda_prefix = std::getenv("CONDA_PREFIX");
-#if __APPLE__
-#define LIBRARY_PREFIX ".dylib"
-#else
-#define LIBRARY_PREFIX ".so"
-#endif
-      std::string omp_lib_path = conda_prefix + "/lib/libomp" LIBRARY_PREFIX;
-      if (!Cpp::LoadLibrary(omp_lib_path.c_str()))
-      {
-          std::cerr << "Failed to load libomp (tried location: " << omp_lib_path << ")\n";
-      }
+      Cpp::LoadLibrary("libomp");
   }
   return res;
 }
