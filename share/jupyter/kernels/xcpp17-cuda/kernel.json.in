@@ -1,5 +1,5 @@
 {
-  "display_name": "C++20",
+  "display_name": "C++17 CUDA",
   "argv": [
       "@XEUS_CPP_KERNELSPEC_PATH@xcpp",
       "-f",
@@ -7,7 +7,9 @@
       "-resource-dir", "@XEUS_CPP_RESOURCE_DIR@",
       "-I", "@XEUS_CPP_INCLUDE_DIR@",
       "-I@XEUS_CPP_INCLUDE_DIR@/python3.12/",
-      "-std=c++20","-D_LIBCPP_DISABLE_AVAILABILITY"
+      "-std=c++17",
+      "-I@XEUS_CPP_INCLUDE_DIR@/../targets/x86_64-linux/include/",
+      "--cuda"
   ],
   "language": "cpp",
   "kernel_protocol_version": "5.6.0", 

@@ -6,6 +6,7 @@
       "{connection_file}",
       "-resource-dir", "@XEUS_CPP_RESOURCE_DIR@","-xc",
       "-I", "@XEUS_CPP_INCLUDE_DIR@",
+      "-I@XEUS_CPP_INCLUDE_DIR@/python3.12/",
       "-std=c23"@XEUS_CPP_OMP@
   ],
   "language": "c",
